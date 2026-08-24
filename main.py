@@ -48,6 +48,34 @@ class GeneralManager:
             else:
                 print("Can't found ID ")
 
+    def update_employee(self,employee_id,employee_name,position,salary):
+        if position == "chef":
+            if employee_id in self.chefs:
+                self.chefs[self.id] = {
+                    "name": employee_name, "position": position, "salary":salary
+                    }
+            else:
+                print("Can't found ID ")    
+        elif position == "waiter" or position == "waitress":
+            if employee_id in self.waiters:
+                self.chefs[self.id] = {
+                    "name": employee_name, "position": position, "salary":salary
+                    }
+            else:
+                print("Can't found ID ")
+        else:
+            if employee_id in self.casheirs:
+                self.chefs[self.id] = {
+                    "name": employee_name, "position": position, "salary":salary
+                }
+            else:
+                print("Can't found ID ")      
+
+    def display_employee(self):
+        print(self.chefs)
+        print(self.waiters)
+        print(self.casheirs)
+
 chefs = {
         1: {
             "name": "Ahmed Mohamed", "position": "chef", "salary": 5000
@@ -80,3 +108,7 @@ casheirs = {
 }
 employee = GeneralManager(chefs,waiters,casheirs)
 employee.add_employee("Hassan Hassan","Chef",5000)
+employee.display_employee()
+employee.remove_employee(4,"chef")
+employee.display_employee()
+employee.update_employee(1,"LailaWalyd","casheir",3000)
