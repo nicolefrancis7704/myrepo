@@ -100,10 +100,10 @@ waiters = {
 }
 casheirs = {
     1: {
-        "name": "Layla Walid", "position": "cashier", "salary": 3000
+        "name": "Layla Walid", "position": "cashier", "salary": 2000
         },
     2: {
-        "name": "Ibrahim Mohsen", "position": "cashier", "salary": 3000
+        "name": "Ibrahim Mohsen", "position": "cashier", "salary": 2000
         }
 }
 employee = GeneralManager(chefs,waiters,casheirs)
@@ -111,4 +111,4 @@ employee.add_employee("Hassan Hassan","Chef",5000)
 employee.display_employee()
 employee.remove_employee(4,"chef")
 employee.display_employee()
-employee.update_employee(1,"LailaWalyd","casheir",3000)
+employee.update_employee(1,"LailaWalyd","casheir",2000)
